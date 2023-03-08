@@ -2,7 +2,10 @@
 
 @section('content')
     <main class="container">
-        <h1>Hoja de vida de User</h1>
-        @include('components.form')
+        @include('components.form-contact', ['contacts' => $general['contacts']])
+        @include('components.form-profile', ['profiles' => $general['profiles']])
+        @include('components.form-experience', ['experiences' => $general['experiences']])
+        @include('components.form-education', ['educations' => $general['educations']])
+        <a href="{{ route('download-pdf') }}" class="btn btn-primary mb-3" target="_blank">Descargar PDF</a>
     </main>
 @endsection

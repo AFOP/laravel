@@ -2,7 +2,7 @@
 
 @section('content')
     <main class="container">
-        <h1>Registrar Item</h1>
+        <h3>Registrar Item</h3>
         @include('components.messages')
         <form class="row g-3" method="POST" action="{{ route('item') }}">
             @csrf
@@ -14,8 +14,8 @@
                 <button type="submit" class="btn btn-primary mb-3">Registar</button>
             </div>
         </form>
-
-        <h1>Lista de Items</h1>
+        <hr class="dropdown-divider">
+        <h3>Lista de Items</h3>
         @foreach ($items as $item)
             <form class="row g-3" method="POST" action="{{ route('item.update', $item->id) }}">
                 @csrf

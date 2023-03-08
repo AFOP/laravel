@@ -13,7 +13,6 @@
             padding: 0;
         }
     </style>
-}
 </head>
 <body>
     @include('components.navbar')
